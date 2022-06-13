@@ -1,0 +1,13 @@
+django
+djangorestframework
+django-cors-headers
+Pillow
+wheel
+whitenoise
+python-dotenv
+
+django-extensions
+Werkzeug
+pyOpenSSL
+
+django_cleanup
