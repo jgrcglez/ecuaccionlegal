@@ -1,10 +1,14 @@
 import React from 'react';
 import ContactInfo from "../components/ContactInfo";
+import Banner from "../components/Banner";
+import Menu from "../components/Menu";
 
 const HomePage = () => {
     return (
         <>
-            <ContactInfo />
+            <Menu />
+            <ContactInfo/>
+            <Banner/>
         </>
     );
 }
