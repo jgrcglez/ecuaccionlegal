@@ -8,3 +8,33 @@ $theme-colors: (
 );
 
 @import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap');
+
+.contact-info-container {
+  width: 100%;
+  background-color: #363d4d;
+  color: #ececec;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  flex-flow: column;
+
+  .contact-header, .contact-info {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .contact-header {
+    font-weight: 500;
+  }
+
+  .contact-info {
+    font-weight: 200;
+  }
+}
+
+.banner-container {
+  .top-banner {
+
+  }
+}
