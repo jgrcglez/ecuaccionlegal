@@ -42,4 +42,12 @@ $theme-colors: (
 .menu-button {
   position: fixed;
   right: 0;
+  margin: 10px;
+}
+
+.menu-button button, .menu-button button:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
 }
