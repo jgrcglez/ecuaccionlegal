@@ -29,31 +29,29 @@ const Menu = (props) => {
         }
     }, []);
 
-    if (longMenu)
-        return (
-            <>
-                <div className="long-menu-container">
-                    <div className="container-lg g-0">
-                        <div className="row g-0">
-                            <div className="col g-0">
-                                <div className="long-menu">
-                                    <Navigator activeItem = {props.activeItem}/>
-                                </div>
+    let theMenu;
+    if (longMenu) {
+        theMenu = <>
+            <div className="long-menu-container">
+                <div className="container-lg g-0">
+                    <div className="row g-0">
+                        <div className="col g-0">
+                            <div className="long-menu">
+                                <Navigator activeItem={props.activeItem}/>
                             </div>
                         </div>
                     </div>
                 </div>
-            </>
-        );
-    else
-        return (
-            <>
-                <div className="menu-button">
+            </div>
+        </>
+    } else {
+        theMenu = <>
+            <div>
+                <div className="menu-button d-block d-lg-none">
                     <Button variant="secondary" onClick={handleShow}>
                         <FontAwesomeIcon icon={['fas', 'bars']}/>
                     </Button>
                 </div>
-
                 <Offcanvas show={show} onHide={handleClose}>
                     <Offcanvas.Header closeButton closeVariant={"white"}>
                         <Offcanvas.Title>
@@ -61,11 +59,13 @@ const Menu = (props) => {
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                        <Navigator activeItem = {props.activeItem}/>
+                        <Navigator activeItem={props.activeItem}/>
                     </Offcanvas.Body>
                 </Offcanvas>
-            </>
-        );
+            </div>
+        </>
+    }
+    return theMenu;
 }
 
 export default Menu;

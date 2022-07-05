@@ -50,10 +50,12 @@ body {
 
   .contact-header {
     font-weight: bold;
+    font-size: 1rem;
   }
 
   .contact-info {
     font-weight: 200;
+    font-size: 1rem;
   }
 }
 
@@ -252,6 +254,9 @@ $navbar-background-color: rgba(76, 80, 158, 0.03);
       flex-flow: row;
       justify-content: space-between;
       padding: 1rem;
+    }
+    .contact-header, .contact-info {
+      font-size: 1.3rem;
     }
   }
   .menu-button {
